@@ -2,5 +2,23 @@
 // Определить количество разных элементов массива.
 size_t task2(double A[], size_t n)
 {
-  return 0;
+  int i = 0, k = 0, j = 0, r = 0;
+  for (i = 0; i < n; i++)
+  {
+    for (j = 0; j < n; j++)
+    {
+      if (A[i] == A[j])
+      {
+        r++;
+      }
+    }
+    if (r == 1)
+    {
+      k++;
+      r = 0;
+    }
+    else
+      r = 0;
+  }
+  return r;
 }

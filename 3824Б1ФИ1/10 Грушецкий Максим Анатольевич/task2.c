@@ -2,22 +2,22 @@
 // Заменить в нем все элементы, встречающиеся менее двух раз, на -1.
 void task2(int A[], size_t n)
 {
-  int h;
-int c;
-for (int i = 0; i < n; i++)
-{
-	c = 0;
-	h = A[i];
-	for (int g = 0; g < n; g++)
+	int h;
+	int c;
+	for (int i = 0; i < n; i++)
 	{
-		if (A[g] == h)
+		c = 0;
+		h = A[i];
+		for (int g = 0; g < n; g++)
 		{
-			c += 1;
+			if (A[g] == h)
+			{
+				c += 1;
+			}
+		}
+		if (c < 2)
+		{
+			A[i] = -1;
 		}
 	}
-	if (c < 2)
-	{
-		A[i] = -1;
-	}
-}
 }

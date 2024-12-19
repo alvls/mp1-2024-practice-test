@@ -3,6 +3,7 @@
 // Если массив не упорядочен, вернуть 0.
 // Если массив упорядочен, вернуть 1.
 #include <stdio.h>
+#include <stdlib.h>
 
 int task1(double A[], size_t n)
 {

@@ -3,5 +3,16 @@
 // иначе вернуть 0.
 int task1(double A[], size_t n)
 {
-  return -1;
+  if (n <= 2) {
+        return 0;
+    }
+    
+  float q=A[1]/A[0];
+  int flag=1;
+  for (int i=2;i<n;i++)
+  {
+      if((A[i]/A[i-1])!=q) return 0;
+      
+  }
+  return 1;
 }

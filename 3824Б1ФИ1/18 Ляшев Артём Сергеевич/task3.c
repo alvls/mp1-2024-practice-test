@@ -1,6 +1,27 @@
-// Задача 3. Дана строка s, состоящая из английских слов, разделенных пробелами
-// (одним или несколькими). Определить длину самого короткого слова в строке.
-int task3(char *s)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+int task3(char* s)
 {
-  return -1;
+  int min = INT_MAX;
+  int k = 0;
+
+  for (int i = 0; i < strlen(s); i++)
+  {
+    if (s[i] == ' ')
+    {
+      if (k > 0 && min > k)
+        min = k;
+      k = 0;
+    }
+    else
+    {
+      k++;
+    }
+  }
+  if (k > 0 && min > k)
+    min = k;
+  return ((min == INT_MAX) ? 0 : min) - 1;
 }

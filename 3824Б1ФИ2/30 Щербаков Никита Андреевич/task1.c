@@ -9,7 +9,6 @@ int task1(int A[], size_t n)
 		{
 			element = i + 1;
 		}
-		printf("%zu\n", i);
 	}
 	return element + 1;
 }

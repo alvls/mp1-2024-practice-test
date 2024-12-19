@@ -2,7 +2,7 @@
 // Найти максимальный из тех элементов A, которые содержатся в интервале (a, b).
 // Вернуть 0, если требуемые элементы отсутствуют.
 #include <limits.h>
-#include <stdlib.h>
+
 int task1(unsigned A[], size_t n, unsigned a, unsigned b)
 {
     unsigned max_value = 0; 

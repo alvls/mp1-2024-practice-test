@@ -1,5 +1,5 @@
 #include <stdio.h>
-size_t task1(int A[], size_t n)
+size_t task2(int A[], size_t n)
 {
     size_t c=0;
     if (n>1) if (A[0]>=A[1])c++;

@@ -12,7 +12,7 @@ void task1(unsigned A[], size_t N)
       A[i] += first;
     }
     else {
-  A[i] += last;
+      A[i] += last;
     }
   }
 }

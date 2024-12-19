@@ -11,7 +11,8 @@ char* task3(char *s)
   while(s[i] != '\0'){
     if(s[i] >= 'a' && s[i] <='z'){
       if (j + 1 == size){
-        new_str = realloc(new_str, size*2);
+        size *= 2;
+        new_str = realloc(new_str, size*sizeof(char));
       }
       new_str[j] = s[i];
       j++;

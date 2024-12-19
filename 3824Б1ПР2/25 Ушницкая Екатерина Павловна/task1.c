@@ -8,7 +8,7 @@ size_t task1(int A[], size_t n) {
 
     size_t count_of_left = 0;
 
-    for (int i = 1; i < n; i++) {
+    for (size_t i = 1; i < n; i++) {
         if (A[i] < A[i - 1]) { 
             count_of_left++;
         }

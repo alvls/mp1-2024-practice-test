@@ -3,5 +3,17 @@
 // элемента в нем.
 int task1(unsigned A[], size_t N)
 {
-  return -1;
+  int min, max, imin, imax;
+  min = A[0];
+  max = A[0];
+  imin = 0;
+  imax = 0;
+  
+  for (int i = 1; i < N; i++)
+  {
+  	if (A[i] < min) { min = A[i]; imin = i; }
+  	if (A[i] > max) { max = A[i]; imax = i; }
+  }
+  if (imin < imax) { return (min); }
+  else { return (max); }
 }

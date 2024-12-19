@@ -4,5 +4,25 @@
 // Пример: ch = ‘k’, s = “abckdgkefgk”, ответ: “abck#dgk#efgk#”.
 char* task3(char *s, char ch)
 {
-  return "task3";
+      size_t count = 0;
+    for (char* p = s; *p != '\0'; p++) {
+        if (*p == ch) {
+            count++;
+        }
+    }
+    size_t new_length = strlen(s) + count + 1;
+    char* result = (char*)malloc(new_length * sizeof(char));
+    if (!result) {
+        return NULL;
+    }
+    char* dest = result;
+    for (char* p = s; *p != '\0'; p++) {
+        *dest++ = *p;
+        if (*p == ch) {
+            *dest++ = '#';
+        }
+    }
+    *dest = '\0';
+
+    return result;
 }

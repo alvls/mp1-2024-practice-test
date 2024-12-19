@@ -16,6 +16,7 @@ size_t task2(double A[], size_t n) {
 
     return count;
 }
+  
    {
     double A[] = {  };
     size_t n = sizeof(A) / sizeof(A[0]);

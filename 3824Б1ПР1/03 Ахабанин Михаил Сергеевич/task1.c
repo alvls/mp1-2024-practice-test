@@ -2,5 +2,11 @@
 // Вычислить сумму S тех элементов массива, значения которых совпадают с их индексами.
 unsigned task1(unsigned A[], size_t n)
 {
-  return -1;
+	size_t S = 0;
+	for (size_t i = 0; i < n; i++) {
+		if (A[i] == i) {
+			S += A[i];
+		}
+	}
+	return S;
 }

@@ -5,6 +5,7 @@
 // При невозможности найти пару, вернуть {-1,-1}.
 #include <limits.h>
 #include <math.h>
+#include <stdio.h>
 
 struct Indices
 {

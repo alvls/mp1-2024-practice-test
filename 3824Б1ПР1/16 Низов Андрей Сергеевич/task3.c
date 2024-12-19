@@ -2,5 +2,26 @@
 // (одним или несколькими). Определить количество слов в строке.
 int task3(char *s)
 {
-  return -1;
+  int count = 0;
+  int i = 0;
+  while(s[i] == ' ')
+    i++;
+  while(s[i] != '\0')
+  {
+    if(s[i] == ' ')
+    {
+      i++;
+      while(s[i] == ' ')
+      {
+        i++;
+      }
+    }
+    else
+    {
+      count++;
+      while(s[i] != ' ')
+        i++;
+    }
+  }
+  return count;
 }

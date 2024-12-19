@@ -4,8 +4,8 @@
 //   то включить в ss N первых символов строки s.
 // Если длина строки s меньше N,
 //   то включить в ss все символы строки s, добавив после них символы '&'.
-#include <string.h>
-#include <stdlib.h>
+#include <string.h> // Для strlen и strcpy
+#include <stdlib.h> // Для malloc и size_t
 char* task3(char* s, unsigned N)
 {
     

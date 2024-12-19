@@ -4,5 +4,12 @@
 // При отсутствии локальных максимумов вернуть -1.
 long long task2(unsigned A[], size_t n)
 {
-  return -2;
+  int locmax = INT_MAX;
+  for (int i = 1; i < n - 1; i++) {
+    if (A[i - 1] <= A[i] && A[i] >= A[i + 1]) {
+      if (A[i] < locmax) locmax = A[i];
+    } 
+  }
+  if (locmax == INT_MAX) return -1;
+  return locmax;
 }

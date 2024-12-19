@@ -11,6 +11,7 @@ int letters_counter(const char* s) {
     }
     return count;
 }
+
 size_t task3(char* s);
 {
    char task3[] = "";

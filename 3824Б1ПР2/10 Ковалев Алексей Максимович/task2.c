@@ -1,7 +1,6 @@
 // Задача 2. Дан непустой массив A, содержащий n натуральных чисел.
 // Заменить в нем все элементы, встречающиеся менее двух раз, на -1.
-#include <stddef.h> // Для size_t
-#include <stdlib.h> // Для malloc, free
+#include <stdlib.h> // Для malloc, free и size_t
 void task2(int A[], size_t n) {
     if (n == 0) {
         return; // Обработка пустого массива, хотя по условию он всегда непустой

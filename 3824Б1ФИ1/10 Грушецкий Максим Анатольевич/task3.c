@@ -6,5 +6,18 @@
 //   то включить в ss все символы строки s, добавив после них символы '&'.
 char* task3(char *s, unsigned N)
 {
-  return "task3";
+  	char* ss = (char*)malloc(N * sizeof(char));
+	int len = strlen(s);
+	if (len >= N) {
+		strncpy(ss, s, N); 
+		ss[N] = '\0';
+	}
+	else {
+		strcpy(ss, s); 
+		for (int i = len+1; i < N; i++) {
+			ss[i] = '&'; 
+		}
+		ss[N] = '\0'; 
+	}
+	return ss;
 }

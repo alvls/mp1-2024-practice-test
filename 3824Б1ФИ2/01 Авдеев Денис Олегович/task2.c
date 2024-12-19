@@ -13,16 +13,20 @@ struct Indices
 };
 struct Indices task2(int A[], size_t n, double R)
 {
-	int ind1 = 0, ind2 = 0, summa = INT_MAX;
+	int ind1 = n+1, ind2 = n+1, summa = INT_MAX;
 	if (n < 2) {
 		struct Indices a = { -1, -1 };
 		return a;
 	}
-	for (size_t i = n; i > 1; i--) {
-		for (size_t j = i - 1; j > 0; j--) {
-			if (abs(A[i]+A[j]-R) < summa){
-				ind1 = i;
-				ind2 = j;
+	for (size_t i = 0; i < n - 1; i++) {
+		for (size_t j = i + 1; j < n; j++) {
+			if (abs(A[i] + A[j] - R) < summa) {
+				if (i < ind1 && j < ind2) {
+					ind1 = i;
+					ind2 = j;
+					summa = abs(A[i] + A[j] - R);
+				}
+
 			}
 		}
 	}

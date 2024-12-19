@@ -3,5 +3,12 @@
 // Локальный максимум – элемент, который >= левого и правого соседей.
 size_t task2(double A[], size_t n)
 {
-  return -1;
+  int i;
+  int ans = 0;
+  for (i = 1; i < (n-1); i++){
+    if (A[i]>=A[i-1] && A[i]>=A[i+1]){
+      ans++;
+    }
+  }
+  return ans;
 }

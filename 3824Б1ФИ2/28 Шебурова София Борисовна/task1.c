@@ -2,6 +2,7 @@
 // не менее двух нулей. Найти сумму элементов, расположенных между последними 
 // двумя нулями.
 #include <stdio.h>
+#include <stdlib.h>
 int task1(int A[], size_t n) {
     int lastIndex = -1;
     int secondLastIndex = -1;

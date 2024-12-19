@@ -5,6 +5,6 @@ int task1(int A[], size_t n)
 {int k=n-1,s=0;
  while(A[k]!=0){k--;}
  k--;
- while(A[k]!=0){s=s+a[k];k--;}
+ while(A[k]!=0){s=s+A[k];k--;}
   return s;
 }

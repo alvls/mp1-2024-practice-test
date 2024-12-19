@@ -4,5 +4,17 @@
 // При отсутствии локальных минимумов вернуть -1.
 long long task2(unsigned A[], size_t n)
 {
-  return -2;
+  if (n == 1) {
+    return -1;
+}
+long long max_local_min = -1;
+for (size_t i = 1; i < n - 1; ++i) {
+    if ((A[i] <= A[i - 1]) && (A[i] <= A[i + 1])) {
+        if ( max_local_min < A[i]) {
+            max_local_min = A[i];
+            
+        }
+    }
+}
+    return max_local_min;
 }

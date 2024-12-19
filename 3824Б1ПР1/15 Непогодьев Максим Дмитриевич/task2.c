@@ -4,5 +4,11 @@
 // Найти число серий в массиве.
 int task2(unsigned A[], size_t n)
 {
-  return -1;
+  int ans = 1;
+  for (int i = 1; i < n; i++) {
+	  if (A[i] != A[i - 1]) {
+		  ans++;
+	  }
+  }
+  return ans;
 }

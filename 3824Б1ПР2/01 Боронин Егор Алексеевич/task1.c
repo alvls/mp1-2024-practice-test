@@ -2,7 +2,14 @@
 // Проверить, является ли массив упорядоченным (не строго) по возрастанию.
 // Если массив не упорядочен, вернуть 0.
 // Если массив упорядочен, вернуть 1.
+#include <stddef.h>
+#include <stdio.h>
 int task1(double A[], size_t n)
 {
-  return -1;
+  if (n == 1) return 1;
+  for (int i = 0; i < n - 1; i++)
+  {
+    if (A[i] > A[i+1]) return 0;   
+  }
+  return 1;
 }

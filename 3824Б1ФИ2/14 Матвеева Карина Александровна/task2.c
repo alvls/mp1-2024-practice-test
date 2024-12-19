@@ -2,12 +2,11 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 1).
 // Найти длину наименьшей серии.
-int task2(unsigned A[], size_t n)
+int task2(int min_length = n;int current_length = 1; int n);
 {
   
-    int n = sizeof(A) / sizeof(A[0]);
-    int min_length = n;
-    int current_length = 1;
+    n = sizeof(A) / sizeof(A[0]);
+    
 
     for (int i = 1; i < n; i++) {
         if (A[i] == A[i - 1]) {

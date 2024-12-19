@@ -14,7 +14,7 @@ if (strlen(s) >= N)
 {
     strcpy(ss, s + strlen(s) - N); 
 }
-else // если длина строки s меньше N
+else 
 {
     for (i = 0; i < N - strlen(s); i++)
     {

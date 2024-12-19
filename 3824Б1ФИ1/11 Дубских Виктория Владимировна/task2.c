@@ -12,7 +12,8 @@ void task2(int A[], size_t n) {
      
     countElem* counts = (countElem*)malloc(n * sizeof(countElem)); 
     size_t magCount = 0; 
- 
+
+    //see how entries
     for (size_t i = 0; i < n; i++) { 
         int found = 0; 
         for (size_t j = 0; j < magCount; j++) { 

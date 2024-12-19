@@ -4,7 +4,26 @@
 //   то включить в ss N последних символов строки s.
 // Если длина строки s меньше N,
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
-char* task3(char *s, unsigned N)
+char task3(char *s, unsigned N)
 {
-  return "task3";
+char ss[N + 1]; // создаем новую строку ss длины N + 1 для учета завершающего нуля
+
+unsigned int i;
+
+if (strlen(s) >= N) // если длина строки s больше или равна N
+{
+    strcpy(ss, s + strlen(s) - N); 
+}
+else // если длина строки s меньше N
+{
+    for (i = 0; i < N - strlen(s); i++)
+    {
+        ss[i] = ' '; 
+    }
+    strcpy(ss + N - strlen(s), s); 
+}
+
+ss[N] = '\0'; 
+
+return ss; 
 }

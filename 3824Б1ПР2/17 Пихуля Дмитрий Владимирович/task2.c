@@ -6,7 +6,7 @@
 void task2(unsigned A[], size_t n)
 {
 	for (int i = 1; i < n; i++) {
-		if (A[i - 1] == A[i]) {
+		if (A[i - 1] == A[i] && A[i-2] != A[i] && A[i+1] != A[i]) {
 			A[i - 1] = 0;
 			A[i] = 0;
 		}

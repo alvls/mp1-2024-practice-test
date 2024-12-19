@@ -4,7 +4,6 @@
 {
   return -1;
 }*/
-#include <stdio.h>
 #include <stddef.h>
 size_t task1(int A[], size_t n) {
     if (n <= 1) {

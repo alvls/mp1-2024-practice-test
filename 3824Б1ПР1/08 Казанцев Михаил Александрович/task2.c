@@ -3,6 +3,10 @@
 // Локальный максимум – элемент, который >= левого и правого соседей.
 // При отсутствии локальных максимумов вернуть -1.
 long long task2(unsigned A[], size_t n)
-{
-  return -2;
+{unsigned int mx=0;
+  for(int i=1;i<n-1;i++){
+  if(A[i]>=A[i+1] && A[i]>=A[i-1]){if(mx<=A[i]){mx=A[i];}}
+  }
+if(mx==0){return -1;}
+else{return mx;}
 }

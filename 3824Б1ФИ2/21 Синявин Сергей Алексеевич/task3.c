@@ -1,5 +1,7 @@
 // Задача 3. Дана строка s. Сформировать новую строку, содержащую те же символы,
 // но расположенные в обратном порядке.
+#include <stdio.h>
+#include <stdlib.h>
 char* task3(char *s)
 {
     size_t length = strlen(s);

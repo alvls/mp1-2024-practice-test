@@ -1,6 +1,13 @@
 // Задача 1. Дан непустой массив A из N элементов.
 // Найти номер первого экстремального (минимального или максимального) 
 // элемента в нем.
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <ctime>
+#include <limits.h>
+
 int task1(unsigned A[], size_t N)
 {
   int min, max, imin, imax;

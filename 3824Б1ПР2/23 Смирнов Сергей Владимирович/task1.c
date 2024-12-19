@@ -3,8 +3,8 @@
 unsigned task1(unsigned A[], size_t n)
 {
   int S = 0;
-  for(int i = 0; i < size_t ; i++) {
+  for(int i = 0; i < n ; i++) {
     if(A[i] == i) { S += A[i];}
   }
-  return -1;
+  return S;
 }

@@ -6,6 +6,7 @@ long long task2(unsigned A[], size_t n) {
     if (n == 0) {
         return 0;
     }
+    
     long long max_local_min = -1;
     
     if (n > 1 && A[0] <= A[1]) {

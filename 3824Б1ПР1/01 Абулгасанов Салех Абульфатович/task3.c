@@ -1,3 +1,5 @@
+#include <malloc.h>
+#include <string.h>
 char* task3(char* s)
 {
     int len = strlen(s);

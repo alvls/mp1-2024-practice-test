@@ -5,7 +5,7 @@ size_t task1(int A[], size_t n)
   size_t mx = 0;
   if (n == 1)
   	return 0;
-  for (int i = 0; i < n - 1; i++)
+  for (size_t i = 0; i < n - 1; i++)
   {
   	if (A[i] < A[i + 1])
   		mx++;

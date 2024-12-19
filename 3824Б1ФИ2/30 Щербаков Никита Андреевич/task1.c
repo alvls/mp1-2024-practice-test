@@ -2,7 +2,7 @@
 // Найти номер его последнего максимального элемента.
 int task1(int A[], size_t n)
 {
-  int element = 0;
+	int element = 0;
 	for (size_t i = 0; i < n - 1; i++)
 	{
 		if (A[i] < A[i + 1])

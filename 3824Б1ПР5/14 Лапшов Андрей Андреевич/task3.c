@@ -1,8 +1,24 @@
-// Задача 3. Даны: символ ch и строка s. 
-// Сформировать новую строку, в которой перед каждым вхождением символа ch 
-// в строку s вставлен символ ‘#’.
-// Пример: ch = ‘k’, s = “kabckdgkefgk”, ответ: “#kabc#kdg#kefg#k”.
+#include <stdio.h>
+#include <string.h>
+
 char* task3(char *s, char ch)
 {
-  return "task3";
+    char *result = malloc(strlen(s) * 2 + 1);
+    char *p = result;
+    int i;
+
+    for (i = 0; s[i] != '\0'; i++) {
+
+        if (s[i] == ch) {
+            *p++ = '#';
+            *p++ = ch;
+        } else {
+
+            *p++ = s[i];
+        }
+    }
+
+    *p++ = '\0';
+
+    return result;
 }

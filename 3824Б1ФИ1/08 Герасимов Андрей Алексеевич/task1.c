@@ -3,5 +3,20 @@
 // двумя нулями.
 int task1(int A[], size_t n)
 {
-  return -1111111111;
+  int l, i;
+  int r = 0;
+  int res = 0;
+  for(i = 0; i < n; ++i)
+    {
+      if (A[i] == 0)
+      {
+        l = r;
+        r = i;
+      }
+    }
+  for(i = l; i < r; ++i)
+    {
+      res += A[i];
+    }
+  return res;
 }

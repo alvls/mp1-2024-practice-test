@@ -14,6 +14,6 @@ int task1(unsigned A[], size_t N)
   	if (A[i] < min) { min = A[i]; imin = i; }
   	if (A[i] > max) { max = A[i]; imax = i; }
   }
-  if (imin < imax) { return (min); }
-  else { return (max); }
+  if (imin < imax) { return (imin); }
+  else { return (imax); }
 }

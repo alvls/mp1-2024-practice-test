@@ -6,7 +6,34 @@
 // Пример: s1 = "aaa", N1 = 4, s2 = "bbb", N2 = 4
 //   Ответ: "aaabbb"
 // Функции стандартной библиотеки языка С не применять.
-char* task3(char *s1, unsigned N1, char *s2, unsigned N2)
-{
-  return "task3";
+#include <stdio.h>
+
+char* task3(char* s1, unsigned N1, char* s2, unsigned N2) {
+    unsigned len1 = 0;
+    while (s1[len1] != '\0') {
+        len1++;
+    }
+
+    unsigned len2 = 0;
+    while (s2[len2] != '\0') {
+        len2++;
+    }
+    unsigned copyN1 = (N1 < len1) ? N1 : len1; 
+    unsigned copyN2 = (N2 < len2) ? N2 : len2; 
+
+    //+1 for the end string
+    char* result = new char[copyN1 + copyN2 + 1];
+
+    unsigned i;
+    for (i = 0; i < copyN1; i++) {
+        result[i] = s1[i];
+    }
+
+    for (unsigned j = 0; j < copyN2; j++, i++) {
+        result[i] = s2[len2 - copyN2 + j];
+    }
+    //end string
+    result[i] = '\0';
+
+    return result;
 }

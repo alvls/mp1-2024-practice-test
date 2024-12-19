@@ -2,5 +2,14 @@
 // но расположенные в обратном порядке.
 char* task3(char *s)
 {
-  return "task3";
+    size_t length = strlen(s);
+    char* reversed = (char*)malloc(length + 1);
+    if (reversed == NULL) {
+        return NULL;
+    }
+    for (size_t i = 0; i < length; ++i) {
+        reversed[i] = s[length - 1 - i];
+    }
+    reversed[length] = '\0';
+    return reversed;
 }

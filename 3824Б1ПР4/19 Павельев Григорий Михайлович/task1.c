@@ -4,4 +4,9 @@
 void task1(unsigned A[], size_t N)
 {
   A[0] = 1111111111;
+  for(int i = 0;i<N;i++){
+    if(A[i]/2 == 0) A[i] += A[0];
+    else A[i] += A[N-1];
+    printf("%d",A[i]);
+  }
 }

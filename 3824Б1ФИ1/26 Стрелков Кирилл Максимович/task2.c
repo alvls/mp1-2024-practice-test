@@ -4,5 +4,16 @@
 // При отсутствии локальных минимумов вернуть -1.
 long long task2(unsigned A[], size_t n)
 {
-  return -2;
+  int i = 1, counter = 0;
+  unsigned max = 0;
+  for (i = 1; i < n - 1; ++i)
+  {
+    if ((A[i] <= A[i - 1]) && (A[i] <= A[i + 1]) && (A[i] > max))
+    {
+      max = A[i];
+      counter++;
+    }
+  }
+  if (counter > 0) return max;
+  return -1;
 }

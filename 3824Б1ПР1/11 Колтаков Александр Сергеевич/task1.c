@@ -8,6 +8,6 @@ int task1(unsigned A[], size_t n, unsigned a, unsigned b)
 	  if ((A[i] > a) && (A[i] < b))
 		  if (A[i] < min_e) min_e = A[i];
   }
-  if (min_e = b) return 0;
-  else return min_e;
+  if (min_e != b) return min_e;
+  else return 0;
 }

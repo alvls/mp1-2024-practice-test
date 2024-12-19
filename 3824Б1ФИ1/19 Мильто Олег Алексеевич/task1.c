@@ -3,7 +3,6 @@
 // а к нечетным – последний.
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 void task1(int A[], size_t N)
 {

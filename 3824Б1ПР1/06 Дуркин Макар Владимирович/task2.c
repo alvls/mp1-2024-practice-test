@@ -7,7 +7,7 @@ long long task2(unsigned A[], size_t n)
   long long mx = 0;
   if (n < 2)
   	return -1;
-  for (int i = 1; i < n - 1; i++)
+  for (size_t i = 1; i < n - 1; i++)
   {
   	if (A[i] <= A[i + 1] && A[i] <= A[i - 1] && A[i] > mx)
   		mx = A[i];

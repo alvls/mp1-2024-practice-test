@@ -25,6 +25,7 @@ int task1(double A[], size_t n) {
     }
     return 1;
 }
+  
    {
 
     double A[] = { };

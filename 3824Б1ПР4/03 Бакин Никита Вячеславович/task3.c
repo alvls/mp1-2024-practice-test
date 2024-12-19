@@ -1,6 +1,21 @@
 // Задача 3. Дана строка s.
 // Подсчитать количество содержащихся в ней заглавных букв английского алфавита.
-size_t task3(char *s)
-{
-  return -1;
+#include <stdio.h>
+
+int main() {
+    char s[1000]; 
+    int count = 0; 
+
+    printf("Введите строку: ");
+    fgets(s, sizeof(s), stdin); // Используем fgets для безопасного ввода строки
+
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            count++;
+        }
+    }
+
+    printf("Количество заглавных букв: %d\n", count);
+
+    return 0;
 }

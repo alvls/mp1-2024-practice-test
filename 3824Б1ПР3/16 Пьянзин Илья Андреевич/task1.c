@@ -3,7 +3,6 @@
 // и последним минимальным элементами.
 #include <stdio.h>
 #include <limits.h>
-#include <locale.h>
 
 int task1(unsigned A[], size_t N) {
     if (N == 0) {

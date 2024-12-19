@@ -11,7 +11,7 @@ int task1(int A[], size_t n)
     if (A[i] == 0 && flag == 0)
       flag = 1;
     else if (A[i] != 0 && flag == 1)
-      sum += 1ll * A[i];
+      sum += (long long int) A[i];
     else if (A[i] == 0 && flag == 1)
       flag = 2;
   }

@@ -5,7 +5,7 @@ int task1(int A[], size_t n)
 {
     if (n == 0) {
         return -1;
-
+    }
     int max_element = INT_MIN;
     int max_index = -1;
 

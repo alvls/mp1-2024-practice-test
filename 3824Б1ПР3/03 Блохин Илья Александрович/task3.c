@@ -3,7 +3,7 @@
 #include <stddef.h>
 size_t task3(char *s)
 {
-      size_t count = 0;
+    size_t count = 0;
     while (*s) {
         if (*s >= 'A' && *s <= 'Z') {
             count++;

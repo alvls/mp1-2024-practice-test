@@ -4,21 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int task1(unsigned A[], size_t N)
-{
-  int i, n, ni, min, max, minn, maxn;
-printf("N:");
-scanf_s("%i", &n);
-for (i = 1; i <= n; ++i) {
-    printf("%i>", i);
-    scanf_s("%i", &ni);
-    if ((i == 1) || (ni < min)) {
-        min = ni; minn = i;
-    }
-    if ((i == 1) || (ni > max)) {
-        max = ni; maxn = i;
-    }
-}
+void findMinMax(int arr[], int n, int *max, int *min) {
 
-return 0;
+    if (n == 1) {
+        *max = arr[0];
+        *min = arr[0];
+        return;
+    }
+    findMinMax(arr, n - 1, max, min);
+    if (arr[n - 1] > *max)
+        *max = arr[n - 1];
+    if (arr[n - 1] < *min)
+        *min = arr[n - 1];
 }

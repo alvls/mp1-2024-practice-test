@@ -3,5 +3,18 @@
 // и последним максимальным элементами.
 int task1(unsigned A[], size_t N)
 {
-  return -1;
+  int minnum = 0, maxnum = 0, ans = 0;
+  for (int i = 0; i < N; i++) {
+	  if (A[i] < A[minnum]) {
+		  minnum = i;
+	  }
+	  if (A[i] >= A[maxnum]) {
+		  maxnum = i;
+	  }
+  }
+  ans = maxnum - minnum - 1;
+  if (maxnum == minnum) {
+    ans = 0;
+  }
+  return ans;
 }

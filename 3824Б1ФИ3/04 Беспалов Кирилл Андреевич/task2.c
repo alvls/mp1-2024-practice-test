@@ -3,5 +3,13 @@
 // Локальный минимум – элемент, который <= левого и правого соседей.
 size_t task2(double A[], size_t n)
 {
-  return -1;
+     if (N < 3) { return 0;}
+
+    int count = 0;
+
+    for (int i = 1; i < n - 1; i++) {
+          if ((A[i] < A[i - 1]) && (A[i] < A[i + 1])) {count++;}
+    }
+
+    return count;
 }

@@ -3,7 +3,6 @@
 // иначе вернуть 0.
 int task1(double A[], size_t n)
 {
-  double b = A[1] / A[0];
 int c = 0;
 if (n < 2) {
     return 0; 
@@ -14,9 +13,10 @@ for (int i = 0; i < n; i++) {
         return 0;
     }
 }
+double k = A[1] / A[0];
 
 for (int i = 1; i < n - 1; i++) {
-    if (A[i + 1] / A[i] != b) {
+    if (A[i + 1] / A[i] != k) {
         c++;
     }
 }

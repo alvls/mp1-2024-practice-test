@@ -5,16 +5,15 @@
 void task2(int A[], size_t n)
 {
   int count[max_size];
-  int size_a = sizeof(A)/sizeof(int);
   for (int i = 0; i < max_size; i++) {
     count[i] = 0;
   }
-  for (int i = 0; i < size_a; i++) {
-    for (int j = 0; j < size_a; j++) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
       if (A[i] == A[j]) count[i]++;
     }
   }
-  for (int i = 0; i < size_a; i++) {
+  for (int i = 0; i < n; i++) {
     if (count[i] < 2) A[i] = -1;
   }
 }

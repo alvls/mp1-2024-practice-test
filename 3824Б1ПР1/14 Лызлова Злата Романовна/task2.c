@@ -4,5 +4,19 @@
 // Найти длину наименьшей серии.
 int task2(unsigned A[], size_t n)
 {
-  return -1;
+	size_t l = n+1;
+	size_t tl = 1;
+	for (int j = 0; j < n-1; j++)
+	{
+		if (A[j] == A[j + 1]) tl++;
+		else
+		{
+			if (tl < l)
+			{
+				l = tl;
+				tl = 1;
+			}
+		}
+	}
+	return l;
 }

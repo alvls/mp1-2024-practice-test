@@ -1,6 +1,8 @@
-// Задача 3. Дана строка s. Сформировать новую строку, содержащую те же символы,
-// но расположенные в обратном порядке.
-char* task3(char *s)
+char* task3(char* s)
 {
-  return "task3";
+    int len = strlen(s);
+    char* obr = (char*)malloc((len + 1) * sizeof(char));
+    for (int i = 0; i < len; i++) obr[i] = s[len - 1 - i];
+    obr[len] = '\0';
+    return obr; 
 }

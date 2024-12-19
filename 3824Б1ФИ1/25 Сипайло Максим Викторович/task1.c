@@ -2,5 +2,12 @@
 // Найти сколько чисел в массиве меньше своего левого соседа.
 size_t task1(int A[], size_t n)
 {
-  return -1;
+  int i;
+  int ans = 0;
+  for (i = 1; i < n; i++){
+    if (A[i]<A[i-1]){
+      ans++;
+    }
+  }
+  return ans;
 }

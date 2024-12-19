@@ -1,6 +1,7 @@
 // Задача 1. Дан непустой массив A, содержащий n вещественных чисел.
 // Найти номер его последнего максимального элемента.
 #include <limits.h>
+#include <stdio.h>
 int task1(int A[], size_t n) {
     int num = -1; 
     int max_elem = INT_MIN;

@@ -2,7 +2,8 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 1).
 // Найти длину наименьшей серии.
-int task2(int min_length = n;int current_length = 1; int n);
+#include <stdio.h>
+void function(int min_length = n;int current_length = 1; int n);
 {
   
     n = sizeof(A) / sizeof(A[0]);

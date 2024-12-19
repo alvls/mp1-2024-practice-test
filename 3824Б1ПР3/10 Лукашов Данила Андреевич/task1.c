@@ -4,7 +4,7 @@
 int task1(int A[], size_t n)
 {
  
-  int max = 0;
+  int max = A[1];
   int index = 0;
   for (int i = 0; i < n; i++)
     {

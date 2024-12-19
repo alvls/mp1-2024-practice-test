@@ -8,21 +8,21 @@
 #include <malloc.h>
 char* task3(char* s, unsigned N)
 {
-	int len=0;
+	unsigned len=0;
 	while (s[len] != '\0') len++;
 
 	char* ss = (char*)malloc(sizeof(char)*(N+1));
 
 	if (len >= N) {
-		for (int i = 0; i < N; i++) {
+		for (unsigned i = 0; i < N; i++) {
 			ss[i] = s[i];
 		}
 	}
 	else {
-		for (int i = 0; i < len; i++) {
+		for (unsigned i = 0; i < len; i++) {
 			ss[i] = s[i];
 		}
-		for (int i = len; i < N; i++) {
+		for (unsigned i = len; i < N; i++) {
 			ss[i] = '&';
 		}
 	}

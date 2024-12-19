@@ -37,4 +37,5 @@ char* task3(const char *s) {
     free(result);
 
     return final_result;
+  
 }

@@ -9,7 +9,7 @@ char* task3(char *s){
 char* nst=(char*)malloc(strlen(s) + 1);
 int k=0;
 for (int i = 0; s[i] != '\0'; i++){ 
-  if (s[i] >= 'a' && s[i] <= 'z'){nst[k]=s[i];nst[k+!]='\0';k++;}
+  if (s[i] >= 'a' && s[i] <= 'z'){nst[k]=s[i];nst[k+1]='\0';k++;}
 }
     return nst;
 }

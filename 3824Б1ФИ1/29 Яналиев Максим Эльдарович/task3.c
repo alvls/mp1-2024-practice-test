@@ -6,5 +6,19 @@
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
 char* task3(char *s, unsigned N)
 {
-  return "task3";
+  size_t l = strlen(s);
+  char* ss = (char*)malloc(sizeof(char) * N);
+  char symbol = '*';
+  if ((unsigned)l >= N)
+    for(unsigned i = 0; i<N; i++)
+      ss[i] = s[l-1];
+  else{
+    for(unsigned i = 0; i<N; i++){
+      if ((N - (unsigned)l)>i)
+        ss[i] = symbol;
+      else
+        ss[i] = s[i - (N - (unsigned)l)];
+    }
+  }
+  return ss;
 }

@@ -5,10 +5,18 @@
 #include <stdlib.h>
 #include <ctype.h>  
 #include <string.h> 
+
 char* task3(char *s) {
+    if (s == NULL) {
+        return NULL;
+    }
+
     size_t len = strlen(s);
     
-    char *result = (char *)malloc(len + 1);
+    char *result = (char *)malloc(len + 1);    
+    if (result == NULL) {
+        return NULL; 
+    }
 
     int newWord = 1;
 

@@ -3,5 +3,27 @@
 // которые начинаются и заканчиваются одной и той же буквой. 
 int task3(char *s)
 {
-  return -1;
+    int count = 0; 
+    const char* word_start = NULL; 
+
+    for (const char* p = s; ; ++p) {
+        
+        if (*p == ' ' || *p == '\0') {
+            if (word_start) { 
+                char first = *word_start;  
+                char last = *(p - 1);      
+                if (first == last) {
+                    ++count; 
+                }
+                word_start = NULL;
+            }
+            if (*p == '\0') break; 
+        }
+        else if (!word_start) {
+            word_start = p; 
+        }
+    }
+
+    return count;
+}
 }

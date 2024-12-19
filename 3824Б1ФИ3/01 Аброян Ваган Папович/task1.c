@@ -4,5 +4,12 @@
 // Если массив упорядочен, вернуть 1.
 int task1(double A[], size_t n)
 {
-  return -1;
+    if (n <= 1)
+        return 1;
+    for (size_t i = 1; i < n; ++i)
+    {
+        if (A[i] < A[i - 1])
+            return 0;
+    }
+    return 1;
 }

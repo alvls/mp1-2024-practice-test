@@ -3,5 +3,15 @@
 // двумя нулями.
 int task1(int A[], size_t n)
 {
-  return -1;
+	int i = 0, sum = 0;
+	while ((A[i] != 0) && (i < n)) {
+		i++;
+	}
+	i++;
+	while ((A[i] != 0) && (i < n)) {
+		sum += A[i];
+		i++;
+	}
+	return sum;
+	return -1;
 }

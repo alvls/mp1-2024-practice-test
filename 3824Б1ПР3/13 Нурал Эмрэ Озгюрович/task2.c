@@ -2,6 +2,13 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 1).
 // Найти длину наибольшей серии.
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <ctime>
+#include <limits.h>
+
 int task2(unsigned A[], size_t n)
 {
   int s = 1;

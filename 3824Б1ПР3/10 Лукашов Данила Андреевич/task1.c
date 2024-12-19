@@ -3,10 +3,7 @@
 #include <stdio.h>
 int task1(int A[], size_t n)
 {
-  if (n <= 0)
-  {
-return -1;
-  }
+ 
   int max = 0;
   int index = 0;
   for (int i = 0; i < n; i++)

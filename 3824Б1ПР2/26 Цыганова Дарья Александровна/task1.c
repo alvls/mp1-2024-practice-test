@@ -2,9 +2,6 @@
 // Найти сколько чисел в массиве меньше своего правого соседа.
 #include <stddef.h>
 size_t task1(int A[], size_t n) {
-    if (n == 0) {
-        return 0;
-    }
     size_t count = 0;
     for (size_t i = 0; i < n - 1; i++) {
         if (A[i] < A[i + 1]) {

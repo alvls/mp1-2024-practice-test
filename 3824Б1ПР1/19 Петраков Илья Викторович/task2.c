@@ -18,5 +18,5 @@ int task2(unsigned A[], size_t n)
       }
     }
   }
-return count;
+  return count;
 }

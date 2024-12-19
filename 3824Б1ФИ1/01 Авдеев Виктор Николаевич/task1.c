@@ -9,7 +9,7 @@ int task1(double A[], size_t n)
 
     for (size_t i = 1; i < n; ++i)
     {
-        if (A[i] <= A[i - 1])
+        if (A[i] < A[i - 1])
             return 0;
     }
 

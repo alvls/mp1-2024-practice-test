@@ -1,6 +1,9 @@
 // Задача 3. Дана строка s. Сформировать новую строку, состоящую только из цифр,
 // содержащихся в исходной строке s.
 // Пример: s = "abc1d2e34f56g", ответ: "123456".
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h> 
 char* task3(const char *s) {
   
     if (s == NULL) {

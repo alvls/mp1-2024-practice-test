@@ -4,5 +4,18 @@
 // Заменить элементы во всех сериях длины 3 на число 0.
 void task2(unsigned A[], size_t n)
 {
-  A[0] = 1111111111;
+    int j;
+    if (n < 3) return;
+    for (int i = 0; i < n; i += j) {
+        j = 1;
+
+        while (i + j < n && A[i] == A[i + j]) {
+            j++;
+        }
+
+        if (j == 3) {
+            for (int j = 0; j < 3; j++)
+                A[i + j] = 0;
+        }        
+    }
 }

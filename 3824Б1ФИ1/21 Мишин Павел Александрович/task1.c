@@ -4,7 +4,7 @@
 // Если массив упорядочен, вернуть 1.
 int task1(double A[], size_t n)
 {
-  int isSort = 1, i;
+	int isSort = 1, i;
 	for (i = 0; i < n - 1; i++)
 	{
 		if (A[i] > A[i + 1])

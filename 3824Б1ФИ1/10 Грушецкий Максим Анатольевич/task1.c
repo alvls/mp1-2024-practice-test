@@ -11,5 +11,5 @@ for (int i = 0; i < n; i++)
 		n = A[i];
 		ind = i;
 	}
-  return -1;
+  return ind;
 }

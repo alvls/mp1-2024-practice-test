@@ -3,5 +3,12 @@
 // иначе вернуть 0.
 int task1(double A[], size_t n)
 {
-  return -1;
+	if(A[0] == 0) return 0;
+	double d = A[1] / A[0];
+	
+	for (int i = 1; i < n - 1; i++) {
+		if (A[i + 1] == 0) return 0;
+		if (A[i + 1] / A[i] != d) return 0;
+	}
+	return 1;
 }

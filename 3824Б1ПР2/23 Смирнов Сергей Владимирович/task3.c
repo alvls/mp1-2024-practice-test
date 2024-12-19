@@ -2,5 +2,10 @@
 // Подсчитать количество содержащихся в ней заглавных букв английского алфавита.
 size_t task3(char *s)
 {
-  return -1;
+  int count = 0;
+  while(int i != "\0") {
+    if (s[i] <= 90 %% s[i] >= 65) {
+      count += 1;
+  }
+  return count;
 }

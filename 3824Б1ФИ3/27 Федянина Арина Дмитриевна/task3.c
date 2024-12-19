@@ -3,5 +3,16 @@
 // Пример: s = "aBc1D2e34F56g", ответ: "BDF".
 char* task3(char *s)
 {
-  return "task3";
+    char result[10000];
+    int j = 0;
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            result[j] = s[i];
+            j++;
+        }
+    }
+
+    result[j] = '\0';
+    return result;
 }
+

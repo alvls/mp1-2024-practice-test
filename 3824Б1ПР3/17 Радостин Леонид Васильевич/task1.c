@@ -3,4 +3,9 @@
 void task1(int A[], size_t N)
 {
   A[0] = 1111111111;
+  for (int i = 0; i <= N/2; i++) {
+        int start = A[i];
+        A[i] = A[N - i - 1];
+        A[N - i - 1] = start;
+}
 }

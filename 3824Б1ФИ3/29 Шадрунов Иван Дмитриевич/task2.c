@@ -5,8 +5,7 @@
 long long task2(unsigned A[], size_t n)
 {
 long long min_local_max = -1;
-
-
+    
 for(size_t i = 1; i < n - 1; i++)
 {
     if(A[i] > A[i - 1] && A[i] > A[i + 1])

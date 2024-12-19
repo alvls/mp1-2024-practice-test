@@ -4,5 +4,12 @@
 // Найти число серий длины 2 в массиве.
 int task2(unsigned A[], size_t n)
 {
-  return -1;
+  int count = 0;
+  for(int i = 0;i< n - 1;i++){
+    if(A[i] == A[i+1]){
+      count++;
+      i++;
+    }
+  }
+  return count;
 }

@@ -3,5 +3,16 @@
 // иначе вернуть 0.
 int task1(unsigned A[], size_t n)
 {
-  return -1;
+    if (n < 2)
+        return 1;
+    
+    int diff = A[1] - A[0];
+    
+    for (size_t i = 2; i < n; i++) {
+        if (A[i] - A[i-1] != diff) {
+            return 0;
+        }
+    }
+    
+    return 1;
 }

@@ -6,7 +6,8 @@
 size_t task3(char* s)
 {
 	int res = 0;
-	for (size_t i = 0; i < strlen(s); ++i) {
+	size_t size = strlen(s);
+	for (size_t i = 0; i < size; ++i) {
 		if (isalpha(s[i]) && isupper(s[i])) {
 			++res;
 		}

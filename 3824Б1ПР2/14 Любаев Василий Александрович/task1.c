@@ -11,5 +11,5 @@ int task1(int* A, size_t N)
     else if (A[i] > big) { big = A[i]; }
   }
   printf("\nbig = %d; smol = %d", big, smol);
-  return big, smol;
+  return -1;
 }

@@ -1,7 +1,27 @@
 // Задача 1. Дан непустой массив A из N элементов.
 // Найти номер первого экстремального (минимального или максимального) 
 // элемента в нем.
-int task1(unsigned A[], size_t N)
-{
-  return -1;
+#include <stddef.h> // Для size_t
+
+int task1(unsigned A[], size_t N) {
+    if (N == 0) {
+        return -1; // Если массив пустой, возвращаем -1
+    }
+
+    unsigned min = A[0];
+    unsigned max = A[0];
+    int first_extreme_index = 0; // Индекс первого экстремального элемента
+
+    // Проходим по массиву, начиная со второго элемента
+    for (size_t i = 1; i < N; i++) {
+        if (A[i] < min) {
+            min = A[i];
+            first_extreme_index = i; // Обновляем индекс при нахождении нового минимума
+        } else if (A[i] > max) {
+            max = A[i];
+            first_extreme_index = i; // Обновляем индекс при нахождении нового максимума
+        }
+    }
+
+    return first_extreme_index; // Возвращаем индекс первого экстремального элемента
 }

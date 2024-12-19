@@ -11,7 +11,7 @@ return -1;
   int index = 0;
   for (int i = 0; i < n; i++)
     {
-    if ( A[i) > max)
+    if ( A[i] > max)
     {
       max = A[i];
       index = i;

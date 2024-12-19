@@ -5,6 +5,7 @@
 // Если длина строки s меньше N,
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
 
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 

@@ -5,23 +5,18 @@ int task1(int A[], size_t n)
 {
     int zero1 = -1;
     int zero2 = -1;
-    
-    if (n < 2) 
-    {
+    int sum = 0;
+    if (n < 2) {
         return 0;
     }
 
-  
-    for (int i = 0; i < n; i++) 
-    {
+    for (int i = 0; i < n; i++) {
         if (A[i] == 0) 
         {
-            if (zero1 == -1) 
-            {
+            if (zero1 == -1) {
                 zero1 = i;
             }
-            else if (zero2 == -1) 
-            {
+            else if (zero2 == -1) {
                 zero2 = i;
                 break; 
             }
@@ -29,24 +24,19 @@ int task1(int A[], size_t n)
     }
 
   
-    if (zero1 == -1 || zero2 == -1) 
-    {
+    if (zero1 == -1 || zero2 == -1) {
         return 0;
     }
 
 
-    if (zero2 - zero1 <= 1) 
-    {
+    if (zero2 - zero1 <= 1) {
         return 0;
     }
 
-
-    int sum = 0;
-    for (int i = zero1 + 1; i < zero2; i++) 
-    {
+    for (int i = zero1 + 1; i < zero2; i++) {
         sum += A[i];
     }
 
     return sum;
 }
-}
+

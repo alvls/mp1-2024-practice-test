@@ -2,5 +2,11 @@
 // Найти номер его последнего минимального элемента.
 int task1(int A[], size_t n)
 {
-  return -1;
+  	int temp = A[0];
+	for (int i = 0; i < n; i++) {
+		if (A[i] < temp) {
+			temp = A[i];
+		}
+	}
+	return -1;
 }

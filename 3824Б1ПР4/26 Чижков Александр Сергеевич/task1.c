@@ -1,31 +1,31 @@
 #include <stdio.h>
+#include <limits.h>
 
-size_t task1(int A[], size_t n) {
-  size_t count = 0;
-  for (size_t i = 0; i < n - 1; i++) {
-    if (A[i] < A[i + 1]) {
-      count++;
+int task1(int A[], size_t n) {
+    if (n == 0) {
+        return INT_MIN;
     }
-  }
-  return count;
-}
 
-int main() {
-  int arr[] = {1, 5, 2, 8, 3, 9, 4};
-  size_t n = sizeof(arr) / sizeof(arr[0]);
-  printf("Количество чисел меньше правого соседа: %zu\n", task1(arr, n)); 
+    int lastZeroIndex = -1;
+    int secondLastZeroIndex = -1;
+    int zeroCount = 0;
 
-  int arr2[] = {9, 8, 7, 6, 5, 4, 3};
-  n = sizeof(arr2) / sizeof(arr2[0]);
-  printf("Количество чисел меньше правого соседа: %zu\n", task1(arr2, n)); 
+    for (size_t i = 0; i < n; ++i) {
+        if (A[i] == 0) {
+            secondLastZeroIndex = lastZeroIndex;
+            lastZeroIndex = i;
+            zeroCount++;
+        }
+    }
 
-  int arr3[] = {1};
-  n = sizeof(arr3) / sizeof(arr3[0]);
-  printf("Количество чисел меньше правого соседа: %zu\n", task1(arr3, n)); 
+    if (zeroCount < 2) {
+        return INT_MIN;
+    }
 
-  int arr4[] = {1, 2, 3, 4, 5, 4, 3, 2, 1};
-  n = sizeof(arr4) / sizeof(arr4[0]);
-  printf("Количество чисел меньше правого соседа: %zu\n", task1(arr4, n)); 
+    int sum = 0;
+    for (int i = secondLastZeroIndex + 1; i < lastZeroIndex; ++i) {
+        sum += A[i];
+    }
 
-  return 0;
+    return sum;
 }

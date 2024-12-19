@@ -3,5 +3,13 @@
 // а к четным – последний. Первый и последний элементы массива не менять. 
 void task1(unsigned A[], size_t N)
 {
-  A[0] = 1111111111;
+  unsigned firstElement = A[0];
+  unsigned lastElement = A[N - 1];
+  for (int i = 1; i < N - 1; i++) {
+    if (A[i] % 2 == 0) { // Если элемент четный
+        A[i] += lastElement;
+    } else { // Если элемент нечетный
+        A[i] += firstElement;
+    }
+  }
 }

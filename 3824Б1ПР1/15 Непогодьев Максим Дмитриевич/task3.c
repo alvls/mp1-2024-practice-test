@@ -5,7 +5,7 @@
 
 char* task3(char *s, char ch)
 {
-  char* ans = nullptr;
+  char* ans;
   int n = 0, k = 0;
   while (s[n] != '\0') {
   	n++;

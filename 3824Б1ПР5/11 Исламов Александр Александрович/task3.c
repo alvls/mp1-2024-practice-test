@@ -6,7 +6,52 @@
 // Пример: s1 = "aaa", N1 = 4, s2 = "bbb", N2 = 4
 //   Ответ: "aaabbb"
 // Функции стандартной библиотеки языка С не применять.
-char* task3(char *s1, unsigned N1, char *s2, unsigned N2)
-{
-  return "task3";
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+
+char* task3(char* s1, unsigned N1, char* s2, unsigned N2) {
+    setlocale(LC_ALL, "Russian"); 
+
+    size_t len1 = strlen(s1); 
+    size_t len2 = strlen(s2); 
+
+   
+    unsigned copyN1 = (N1 < len1) ? N1 : len1; 
+    unsigned copyN2 = (N2 < len2) ? N2 : len2; 
+
+    
+    static char result[200]; 
+
+    
+    for (unsigned i = 0; i < copyN1; i++) {
+        result[i] = s1[i];
+    }
+
+   
+    for (unsigned i = 0; i < copyN2; i++) {
+        result[copyN1 + i] = s2[len2 - copyN2 + i];
+    }
+
+    
+    result[copyN1 + copyN2] = '\0';
+
+    return result; 
+}
+
+
+void example() {
+    char s1[] = "aaa";
+    unsigned N1 = 4;
+    char s2[] = "bbb";
+    unsigned N2 = 4;
+
+    char* result = task3(s1, N1, s2, N2);
+    printf("Результат: %s\n", result);
+}
+
+
+int main() {
+    example(); 
+    return 0;
 }

@@ -6,11 +6,11 @@
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
 char task3(char *s, unsigned N)
 {
-char ss[N + 1]; // создаем новую строку ss длины N + 1 для учета завершающего нуля
+char ss[N + 1];
 
 unsigned int i;
 
-if (strlen(s) >= N) // если длина строки s больше или равна N
+if (strlen(s) >= N) 
 {
     strcpy(ss, s + strlen(s) - N); 
 }

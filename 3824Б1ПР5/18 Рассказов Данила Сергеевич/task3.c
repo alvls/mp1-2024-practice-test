@@ -28,7 +28,6 @@ int task3(const char *s) {
                 in_word = 1;
                 current_len = 1;
             } else {
-                // Продолжение текущего слова
                 current_len++;
             }
         } else {
@@ -50,7 +49,6 @@ int task3(const char *s) {
     }
 
     if (min_len == INT_MAX) {
-        // В строке нет слов
         return 0;
     }
 

@@ -7,7 +7,7 @@ void task2(int A[], size_t n)
 	int mx = 0;
 	for(int i = 0; i < n; ++i)
 		mx = (mx > A[i]) ? mx : A[i];
-	int* counts = (int*)(malloc(mx * sizeof(int)));
+	int* counts = (int*)malloc(mx * sizeof(int));
 	for(int i = 0; i < n; ++i) ++counts[A[i] - 1];
 	
 	for(int i = 1; i <= mx; ++i)

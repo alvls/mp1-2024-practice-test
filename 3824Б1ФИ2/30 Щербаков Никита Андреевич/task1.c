@@ -5,7 +5,7 @@ int task1(int A[], size_t n)
 	int element = 0;
 	for (size_t i = 0; i < n - 1; i++)
 	{
-		if (A[i] < A[i + 1])
+		if (A[element] < A[i + 1] || A[i] ==  A[i + 1])
 		{
 			element = i + 1;
 		}

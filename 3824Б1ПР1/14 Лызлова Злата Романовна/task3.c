@@ -16,6 +16,7 @@ char* task3(char *s, char ch)
 			i++;
 			t[i] = s[j];
 			j++;
+			i++;
 		}
 		else
 		{

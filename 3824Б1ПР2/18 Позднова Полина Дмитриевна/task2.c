@@ -2,7 +2,21 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 2).
 // Заменить элементы во всех сериях длины 3 на число 0.
+
+#include <stdlib.h>
 void task2(unsigned A[], size_t n)
 {
-  A[0] = 1111111111;
+  if (n < 3) return; 
+  for (size_t i = 0; i < n;) {
+    size_t count = 1;
+    while (i + count < n && A[i] == A[i + count]) {
+        count++;
+    }
+    if (count == 3) {
+        for (size_t j = 0; j < count; j++) {
+            A[i + j] = 0;
+        }
+    }
+    i += count; 
+  }
 }

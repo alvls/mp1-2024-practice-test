@@ -2,7 +2,19 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 2).
 // Найти число серий в массиве.
-int task2(unsigned A[], size_t n)
-{
-  return -1;
-}
+#include <stdio.h>
+
+    int task2(unsigned A[], size_t n) {
+        if (n == 0) {
+            return 0;
+        }
+
+        int series_count = 1;
+        for (size_t i = 1; i < n; i++) {
+            if (A[i] != A[i - 1]) {
+                series_count++;
+            }
+        }
+
+        return series_count;
+    }

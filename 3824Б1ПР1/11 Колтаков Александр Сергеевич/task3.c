@@ -6,7 +6,27 @@
 // Пример: s1 = "aaa", N1 = 4, s2 = "bbb", N2 = 4
 //   Ответ: "aaabbb"
 // Функции стандартной библиотеки языка С не применять.
-char* task3(char *s1, unsigned N1, char *s2, unsigned N2)
+int len_s(char* s) {
+	int  l = 0, i = 0;
+	while (s[i] != '\0') {
+		l++; i++;
+	}
+	return l;
+}
+
+char* task3(char* s1, unsigned N1, char* s2, unsigned N2)
 {
-  return "task3";
+	unsigned l1 = len_s(s1), l2 = len_s(s2);
+	if (N1 > l1) N1 = l1;
+	if (N2 > l2) N2 = l2;
+	char* s;
+	int i;
+	for (i = 0; i < N1; i++) s[i] = s1[i];
+	int j = l2 - N2;
+	while (s[j] != '\0') {
+		s[i] = s2[j]; 
+		i++; j++;
+	}
+	s[i] = '\0';
+	return s;
 }

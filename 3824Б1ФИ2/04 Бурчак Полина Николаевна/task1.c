@@ -2,6 +2,7 @@
 // Вернуть 1, если его элементы образуют геометрическую прогрессию,
 // иначе вернуть 0.
 #include <stdio.h>
+#include <stdlib.h>
 int task1(double A[], size_t n)
 {
     if (n <= 2) {

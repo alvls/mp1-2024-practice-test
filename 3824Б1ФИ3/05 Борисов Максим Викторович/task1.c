@@ -12,5 +12,4 @@ size_t task1(int A[], size_t n)
         }
     }
     return count;
-  return -1;
 }

@@ -3,13 +3,36 @@
 // Найти индексы двух элементов массива, сумма которых наиболее близка к числу R.
 // Если таких пар в массиве несколько, вернуть пару с наименьшими индексами.
 // При невозможности найти пару, вернуть {-1,-1}.
+#include <math.h>
+#include <limits.h>
+
 struct Indices
 {
   int first_index;
   int second_index;
 };
+
 struct Indices task2(int A[], size_t n, double R)
 {
-  struct Indices indices = {-2, -2};
+  struct Indices indices = { -1, -1 };
+  double min_diff = INT_MAX;
+
+  for (size_t i = 0; i < n - 1; ++i) {
+    for (size_t j = i + 1; j < n; ++j) {
+        double sum = A[i] + A[j];
+        double diff = fabs(sum - R);
+        if (diff < min_diff) {
+            min_diff = diff;
+            indices.first_index = i;
+            indices.second_index = j;
+        } 
+        else if (diff == min_diff) {
+            if (i < indices.first_index || (i == indices.first_index && j < indices.second_index)) {
+                indices.first_index = i;
+                indices.second_index = j;
+            }
+       }
+    }
+  }
   return indices;
 }

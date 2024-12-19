@@ -4,5 +4,36 @@
 // При отсутствии локальных минимумов вернуть -1.
 long long task2(unsigned A[], size_t n)
 {
-  return -2;
+	if (n < 1)
+	{
+		return -1;
+	}
+	long long local_min = -1;
+	int found_local_min = 0;
+
+	if (n > 1 && A[0] <= A[1])
+	{
+		local_min = A[0];
+		found_local_min = 1;
+	}
+	for (size_t i = 1; i < n - 1; i++)
+	{
+		if (A[i] <= A[i - 1] && A[i] <= A[i + 1])
+		{
+			if (!found_local_min || A[i] < local_min)
+			{
+				local_min = A[i];
+				found_local_min = 1;
+			}
+		}
+	}
+	if (n > 1 && A[n - 1] <= A[n - 2])
+	{
+		if (!found_local_min || A[n - 1] < local_min)
+		{
+			local_min = A[n - 1];
+			found_local_min = 1;
+		}
+	}
+	return found_local_min ? local_min : -1;
 }

@@ -4,5 +4,26 @@
 // Найти число серий длины 3 в массиве.
 int task2(unsigned A[], size_t n)
 {
-  return -1;
+  int c = 1;
+  int count = 0;
+  for (size_t i = 1; i < n; i++)
+  {
+    if (A[i] == A[i - 1])
+    {
+      c++;
+    }
+    else
+    {
+      c = 1;
+    }
+    if (c == 3)
+    {
+      count++;
+    }
+    if (c == 4)
+    {
+      count--;
+    }
+  }
+  return count;
 }

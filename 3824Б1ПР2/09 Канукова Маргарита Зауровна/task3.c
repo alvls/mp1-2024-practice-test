@@ -6,5 +6,22 @@
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
 char* task3(char *s, unsigned N)
 {
-  return "task3";
+  int length = strlen(s);
+  char* ss;
+
+  if (length >= N) {
+    ss = (char*)malloc((N + 1) * sizeof(char)); 
+    strncpy(ss, s + length - N, N);
+    ss[N] = '\0';
+  }
+  else {
+    ss = (char*)malloc((N + 1) * sizeof(char));
+    int i;
+    for (i = 0; i < N - length; i++) {
+      ss[i] = '*';
+    }
+    strncpy(ss + i, s, length);
+    ss[N] = '\0';
+  }
+  return ss;
 }

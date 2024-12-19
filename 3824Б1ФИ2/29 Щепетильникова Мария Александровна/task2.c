@@ -3,6 +3,9 @@
 // Локальный максимум – элемент, который >= левого и правого соседей.
 // При отсутствии локальных максимумов вернуть -1.
 
+#include <stdio.h>
+#include <locale.h>
+
 long long task2(unsigned A[], size_t n) {
     long long min_local_max = -1; 
     int found_local_max = 0; 

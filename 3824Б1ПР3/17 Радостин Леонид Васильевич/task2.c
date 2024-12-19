@@ -4,5 +4,20 @@
 // Заменить элементы во всех сериях длины 2 на число 0.
 void task2(unsigned A[], size_t n)
 {
-  A[0] = 1111111111;
+    for (size_t i = 0; i < n - 1; i++) {
+        
+        if (A[i] == A[i + 1]) {
+  
+            int length = 2; 
+            while (i + length < n && A[i] == A[i + length]) {
+                length++;
+            }
+            if (length == 2) {
+                A[i] = 0;
+                A[i + 1] = 0;
+            }
+
+            i += length - 1; 
+        }
+    }
 }

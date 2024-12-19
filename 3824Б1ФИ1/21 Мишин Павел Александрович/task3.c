@@ -3,7 +3,6 @@
 #include <string.h>
 char* task3(char *s)
 {
-
   int len = strlen(s);
   int i;
   for (i = 0; i < len / 2; i++)
@@ -13,12 +12,4 @@ char* task3(char *s)
     s[len - 1 - i] = tmp;
   }
   return s;
-  
-  int len = strlen(s);
-  int i;
-  for (i = 0; i < len / 2; i++)
-  {
-    
-  }
-  return "task3";
 }

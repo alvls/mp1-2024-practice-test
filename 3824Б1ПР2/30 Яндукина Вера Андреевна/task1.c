@@ -2,6 +2,7 @@
 // Найти номер его последнего максимального элемента.
 #include <limits.h>
 #include <stdio.h>
+#include <stdlib.h> 
 int task1(int A[], size_t n) {
     int num = -1; 
     int max_elem = INT_MIN;

@@ -2,7 +2,19 @@
 // Назовем «серией» группу подряд идущих одинаковых элементов, 
 // а длиной серии – количество этих элементов (длина серии может быть равна 2).
 // Найти число серий длины 3 в массиве.
-int task2(unsigned A[], size_t n)
-{
-  return -1;
+int task2(unsigned A[], size_t n) {
+    int res = 0;
+    int count = 1;
+    for (int i = 0; i < n - 1; i++) {
+        if (A[i] == A[i+1])
+            count++;
+        else {
+            if (count == 3)
+                res++;
+            count = 1;
+        }
+    }
+    if (count == 3)
+        res++;
+    return res;
 }

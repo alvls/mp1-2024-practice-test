@@ -25,12 +25,3 @@ int* task1(int A[], int n) {
 
   return B;
 }
-
-int main()
-{
-  int n;
-  int A[] = {1, 2, 3, 4, 5};
-
-  task1(A, 5);
-  return 0;
-}

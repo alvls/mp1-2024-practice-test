@@ -4,7 +4,25 @@
 //   то включить в ss N последних символов строки s.
 // Если длина строки s меньше N,
 //   то включить в ss все символы строки s, добавив перед ними символы '*'.
-char* task3(char *s, unsigned N)
-{
-  return "task3";
+char* task3(char* s, unsigned N){
+    int len = strlen(s);
+    char* ss = (char*)malloc(N + 1);
+    if (len >= N) {
+        strcpy(ss, s + (len - N)); 
+    }
+    else {
+        for (unsigned i = 0; i < N; i++) {
+            if (i < len) {
+                ss[i * 2] = '*'; 
+                ss[i * 2 + 1] = s[i]; 
+            }
+            else {
+
+                ss[i * 2] = '*';
+                ss[i * 2 + 1] = '\0';
+            }
+        }
+        ss[N * 2 - 1] = '\0'; 
+    }
+    return ss;
 }
